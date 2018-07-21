@@ -8,7 +8,10 @@
   "scripts": {
     "lint": "eslint ./src --fix",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest",
+    "test:coverage": "jest --watch --coverage",
+    "test:watch": "jest --watch"
   },
   "babel": {
     "presets": [
@@ -29,11 +32,15 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.4.1",
+    "jest-enzyme": "^6.0.2",
     "react-hot-loader": "^4.3.3",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
@@ -42,5 +49,9 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "testPathIgnorePatterns": ["<rootDir>/__tests__/setup/"]
   }
 }
