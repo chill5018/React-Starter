@@ -7,7 +7,7 @@ const title = 'C.Hill Min Setup';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 
 module.hot.accept();
