@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "name": "mimimal-react-setup",
+  "description": "Backend API for Artland",
+  "author": "Colin Hill",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+  },
+  "devDependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
