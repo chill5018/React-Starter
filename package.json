@@ -6,9 +6,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build-dev": "webpack --mode development",
+    "build": "webpack --mode production",
     "lint": "eslint ./src --fix",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 6006 -c .storybook",
     "test": "jest",
     "test:coverage": "jest --watch --coverage",
     "test:watch": "jest --watch"
