@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-
+/**
+ * Simple Test for Demonstration
+ */
 describe('Basic', () => {
   it('Testing', () => {
-    expect(1).toEqual(1) 
-  })
-})
+    expect(1).toEqual(1);
+  });
+});
