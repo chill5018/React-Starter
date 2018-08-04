@@ -1,32 +1,20 @@
+/* eslint-disable */
 const webpack = require('webpack');
+const path = require('path');
+const webpackMerge = require('webpack-merge');
 
-module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js',
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['*', '.js', '.jsx'],
-  },
-  output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js',
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
-  devServer: {
-    contentBase: './dist',
-    port: 3000,
-  },
+const commonConfig = require('./build-utils/webpack.common');
+
+const addons = (addonsArg) => {
+  let addons = []
+    .concat.apply([], [addonsArg])
+    .filter(Boolean);
+
+  return addons.map(name => require(`./build-utils/addons/webpack.${name}.js`))
+};
+
+module.exports = (env) => {
+  const envConfig = require(`./build-utils/webpack.${env.env}.js`);
+
+  return webpackMerge(commonConfig, envConfig, ...addons(env.addons));
 };
