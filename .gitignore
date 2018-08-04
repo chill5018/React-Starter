@@ -1,6 +1,7 @@
 node_modules/
 coverage/ 
 
-dist/bundle.js
+dist/*
+!dist/index.html
 
 *.log
