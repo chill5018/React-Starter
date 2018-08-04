@@ -10,9 +10,9 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.less/,
+        test: /\.s(a|c)ss/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'less-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -22,6 +22,7 @@ const config = {
   devServer: {
     contentBase: './dist',
     hot: true,
+    port: 3000,
   },
   devtool: 'eval-source-map',
 };

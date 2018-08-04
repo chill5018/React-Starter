@@ -6,19 +6,19 @@ const commonPaths = require('./common-paths');
 
 const config = {
   entry: [
-    commonPaths.entryPath
+    commonPaths.entryPath,
   ],
   module: {
     rules: [
       {
-        test: /\.less/,
+        test: /\.s(c|a)ss/,
         exclude: /node_modules/,
         use: ExtractTextWebpackPlugin.extract({
-          use: ['css-loader', 'less-loader'],
-          fallback: 'style-loader'
+          use: ['css-loader', 'sass-loader'],
+          fallback: 'style-loader',
         }),
-      }
-    ]
+      },
+    ],
   },
   plugins: [
     new ExtractTextWebpackPlugin('style.css'),

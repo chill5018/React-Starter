@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './react.png';
+import './index.scss';
 
 
 const doIncrement = (prevState) => ({
