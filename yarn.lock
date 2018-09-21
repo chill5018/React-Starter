@@ -3259,6 +3259,13 @@ enzyme-adapter-utils@^1.8.0:
     object.assign "^4.1.0"
     prop-types "^15.6.2"
 
+enzyme-matchers@6.0.5:
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/enzyme-matchers/-/enzyme-matchers-6.0.5.tgz#d0313ccc69674b1fa6224d4154e445455f21f4d9"
+  dependencies:
+    circular-json-es6 "^2.0.1"
+    deep-equal-ident "^1.1.1"
+
 enzyme-matchers@^6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/enzyme-matchers/-/enzyme-matchers-6.1.1.tgz#35a28af71f8cc503945ddac702a652700dc17d40"
