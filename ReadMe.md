@@ -8,7 +8,7 @@ Taken inspiratation from Robin Wieruch's [ Minimal React Babel Setup ](https://g
 ### Core: 
 * Babel v. 6
 * Webpack v. 4
-* React v. 16.4.1
+* React v. 16.5.1
 
 ### Development: 
 * Storybook v. 3.4.8
