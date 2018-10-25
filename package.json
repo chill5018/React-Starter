@@ -12,7 +12,7 @@
     "test": "jest",
     "test:coverage": "jest --watch --coverage",
     "test:watch": "jest --watch",
-    "start": "yarn dev",
+    "start": "serve -s dist",
     "dev": "webpack-dev-server --mode development --env.env=dev",
     "dev:bundleanalyze": "npm run dev -- --env.addons=bundleanalyze",
     "build": "webpack --env.env=prod",
