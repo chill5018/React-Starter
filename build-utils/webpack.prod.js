@@ -21,7 +21,7 @@ const config = {
       sourceMap: true,
     }),
     new CompressionWebpackPlugin({
-      asset: '[path].gz[query]',
+      filename: '[path].gz[query]',
       algorithm: 'gzip',
       test: /\.(js|html|css)$/,
       threshold: 10240,
